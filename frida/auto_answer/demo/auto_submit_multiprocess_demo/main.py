@@ -7,7 +7,7 @@ from answer import Student
 """
 使用多少进程, 数值太高会卡
 """
-set_processes = 20
+set_processes = 1
 
 """
 存放一些答题脚本的启动参数
@@ -35,17 +35,17 @@ myarg = {
 ks_persistent, sess, userid
 """
 cookies = {
-    "YFD_U": "",
-    "__sub_user_infos__": "",
-    "g_loc": "",
-    "g_sess": "",
-    "ks_deviceid": "",
-    "ks_persistent": "此处必填",
-    "ks_sess": "",
-    "persistent": "",
-    "sess": "此处必填",
-    "sid": "",
-    "userid": "此处必填"
+    "YFD_U": "7557738252514426830",
+    "__sub_user_infos__": "/24T7Ovgtuud9LSYuz4IEyxXwt5CZcR9QMCkGmwmFLl459t6btudcrRkKyKJNooO+J2QHBj/GQUo7YCn/Dvv9A==; g_loc=vPeteFfrRL2jJ0VNIL3TWQ==",
+    "g_loc": "vPeteFfrRL2jJ0VNIL3TWQ==",
+    "g_sess": "KKUG49cst5N18wSLY7gSdx7vxzfSC33/Jnw+avCFzBcQq6V7h0uxvwsm57HcOd9YufnU+qnjasttRmB4T8rFQFz0PUD5rXJhtHuv569HVNFZrJoFC2Hdal8YDmcIpy4r",
+    "ks_deviceid": "273522396",
+    "ks_persistent": "fIXkhSK7HnjKhS9toCsIV1HFbiQcHpAYXLeoOlz+rZ5eK8d3FDn8khMBtlBioXoIJnYfedveQrmxO+zYBluuY7nrdXe6K7d1kg/0yUI48uQ=",
+    "ks_sess": "oDaRJZlGfMsVXj4KOKWSoqweReVJdnc/CV4V18ynp1GIZfTIbEbSl4j+5u4uUCFd",
+    "persistent": "2HEzSqjFoEdSPL2nkk8tojs3bXfvhIY6nSycMnUWjeFWiv/BSapjJe38vDPS/4EHDcHZaKjAEZQ8CPcxcBE4IQ==",
+    "sess": "KKUG49cst5N18wSLY7gSdx7vxzfSC33/Jnw+avCFzBcQq6V7h0uxvwsm57HcOd9YufnU+qnjasttRmB4T8rFQINYvlpmkqgDNeteZ8PL32c=",
+    "sid": "8479376303230319681",
+    "userid": "703993238"
 }
 
 """
@@ -53,8 +53,8 @@ cookies = {
 注意把sign值替换成{sign}, 用于后续填充
 """
 url = {
-    "get_question": "https://xyks.yuanfudao.com/leo-game-pk/android/math/pk/match/v2?pointId=2&_productId=611&platform=android32&version=3.93.2&vendor=xiao_mi&av=5&sign={sign}&deviceCategory=pad",
-    "submit_answer": "https://xyks.yuanfudao.com/leo-game-pk/android/math/pk/submit?_productId=611&platform=android32&version=3.93.2&vendor=xiao_mi&av=5&sign={sign}&deviceCategory=pad"
+    "get_question": "https://xyks.yuanfudao.com/leo-reward/android/check-in/status/v2?_productId=611&platform=android32&version=3.93.4&vendor=tencent&deviceCategory=pad&av=5&isBackground=0&sign={sign}",
+    "submit_answer": "https://xyks.yuanfudao.com/bh5/leo-web-search/search.html?_productId=611&platform=android32&version=3.93.4&vendor=tencent&deviceCategory=pad&av=5&isBackground=0&sign={sign}"
 }
 
 # cookie = hookcookie if cookie_type else cookies

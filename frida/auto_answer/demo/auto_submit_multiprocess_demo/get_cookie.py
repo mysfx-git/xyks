@@ -40,14 +40,23 @@ def inject_script(pid, script_path):
             if message['type'] == 'send':
                 payload = message['payload']
                 try:
-                    # 尝试使用 utf-8 解码
-                    decoded_payload = payload.encode('latin1').decode('utf-8')
-                except UnicodeDecodeError:
-                    # 如果失败，使用 gbk 解码
-                    decoded_payload = payload.encode('latin1').decode('gbk', errors='ignore')
-                print(f"Received message: {decoded_payload}")
+                    # 提取 URL 和 Cookie
+                    url = payload['url']
+                    cookie = payload['cookie']
+                    
+                    print(f"Captured URL: {url}")
+                    print(f"Captured Cookie: {cookie}")
+                    
+                    # 将 URL 和 Cookie 保存到文件
+                    with open('captured_data.txt', 'a') as f:
+                        f.write(f"URL: {url}\nCookie: {cookie}\n\n")
+                        
+                except Exception as e:
+                    print(f"Error processing message: {e}")
             elif message['type'] == 'error':
                 print(f"Error: {message['stack']}")
+
+
 
         script.on('message', on_message)
         script.load()

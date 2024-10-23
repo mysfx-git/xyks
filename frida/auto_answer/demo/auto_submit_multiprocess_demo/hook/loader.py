@@ -220,9 +220,9 @@ if __name__ == "__main__":
     print("Sign值: ", sign_value)
 
     # 解密试题
-    # reponse_value = fridaLoader.get_question("此处输入获取到的试题的base64编码")
-    # print("获取试题: ", reponse_value)
+    reponse_value = fridaLoader.get_question("此处输入获取到的试题的base64编码")
+    print("获取试题: ", reponse_value)
 
     # 加密答案
-    # request_value = fridaLoader.get_request_encrypt("此处输入获取到的试题的base64编码")
-    # print("加密后答案: ", request_value)
+    request_value = fridaLoader.get_request_encrypt("此处输入获取到的试题的base64编码")
+    print("加密后答案: ", request_value)
